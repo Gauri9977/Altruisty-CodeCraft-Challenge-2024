@@ -1,18 +1,3 @@
-### Problem Statement:
-
-In a given string representing a line segment with bees (`*`) and flowers (`|`), you are tasked to calculate the number of bees between two flowers for each given range of indices. The indices are 1-indexed.
-
----
-
-### Approach:
-
-1. **Prefix Sum**: Create a prefix sum array to count the bees (`*`) up to each index.
-2. **Process Queries**: For each query, find the first and last flowers (`|`) in the range, and count the bees between them using the prefix sum.
-
----
-
-### Code Implementation:
-
 def count_bees_between_flowers(s, startIndex, endIndex):
     # Length of the string
     n = len(s)
@@ -71,26 +56,3 @@ print("\n")
 
 # Print the result for each query
 print(*result)  # Print the result for each query
-
----
-
-### Explanation:
-
-- **Prefix Sum Array**: We calculate the cumulative number of bees up to each index in the string.
-- **Query Processing**: For each query, we find the first and last flowers in the specified range and use the prefix sum to count the bees between them.
-- **Edge Cases**: If no valid pair of flowers is found in the range, we append 0 to the result.
-
----
-
-### Time Complexity:
-
-- **O(n)**: Calculating the prefix sum.
-- **O(q)**: Processing each query, where `q` is the number of queries.
-
-### Space Complexity:
-
-- **O(n)**: Storing the prefix sum array.
-
----
-
-This solution is efficient and solves the problem optimally.
