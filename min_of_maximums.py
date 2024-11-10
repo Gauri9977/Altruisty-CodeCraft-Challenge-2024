@@ -1,18 +1,3 @@
-# Problem Statement:
-
-Given an array, find the minimum of the maximums of all contiguous subarrays of length `k`.
-
-### Input:
-
-- `k` : Length of the subarray.
-- `n` : Size of the array.
-- `arr[]` : Array of size `n`.
-
-### Output:
-Return the minimum of the maximums of all contiguous subarrays of size `k`.
-
-### Code Implementation:
-
 from collections import deque
 
 def min_of_maximums(arr, n, k):
@@ -55,14 +40,3 @@ k = 2                      # Length of the segment (window)
 # Output with empty lines before printing the result
 print("\n" * 2)
 print(min_of_maximums(arr, n, k))
-
-### Explanation:
-
-- The sliding window approach uses a deque to find the maximum in each window.
-- The result is the minimum of these maximums.
-
-### Time Complexity:
-- **O(n)**: Each element is processed once.
-
-### Space Complexity:
-- **O(k)**: The deque stores up to `k` elements.
