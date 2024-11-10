@@ -9,18 +9,18 @@ Welcome to my **Altruisty CodeCraft Challenge** repository! Here, you'll find my
 
 I participated in the **Coding Challenge** 🖥️ and submitted solutions to 5 coding problems. This repo contains the code implementations 🧑‍💻.
 
+---
+
 Q. 1.
 ### Problem Statement:
 
 Meera is a real estate investor who buys properties at a low price and sells them at a higher price to maximize her profit. If prices only decrease, she doesn't buy. Your task is to calculate the maximum profit Meera could have made based on the daily property prices.
 
----
 
 ### Approach:
 
 To find the maximum profit, we track the lowest price seen so far and calculate the potential profit at each step. The result is the maximum of these profits.
 
----
 
 ### Explanation:
 
@@ -28,7 +28,6 @@ To find the maximum profit, we track the lowest price seen so far and calculate 
 - For each price, we update `min_price` and calculate the potential profit (`price - min_price`), updating `max_profit` if needed.
 - Finally, we print the `max_profit`.
 
----
 
 ### Time Complexity:
 - **O(n)**: We iterate over the list of prices once.
@@ -43,14 +42,12 @@ Q. 2.
 
 In a given string representing a line segment with bees (`*`) and flowers (`|`), you are tasked to calculate the number of bees between two flowers for each given range of indices. The indices are 1-indexed.
 
----
 
 ### Approach:
 
 1. **Prefix Sum**: Create a prefix sum array to count the bees (`*`) up to each index.
 2. **Process Queries**: For each query, find the first and last flowers (`|`) in the range, and count the bees between them using the prefix sum.
 
----
 
 ### Explanation:
 
@@ -58,7 +55,6 @@ In a given string representing a line segment with bees (`*`) and flowers (`|`),
 - **Query Processing**: For each query, we find the first and last flowers in the specified range and use the prefix sum to count the bees between them.
 - **Edge Cases**: If no valid pair of flowers is found in the range, we append 0 to the result.
 
----
 
 ### Time Complexity:
 
@@ -85,7 +81,6 @@ Given an array, find the minimum of the maximums of all contiguous subarrays of 
 ### Output:
 Return the minimum of the maximums of all contiguous subarrays of size `k`.
 
----
 
 ### Explanation:
 
@@ -118,6 +113,8 @@ You are given a list of candy flavours with their counts. Your task is to find t
 ### Space Complexity:
 - **O(N)**: We store the count of each flavour in a `Counter`, requiring space proportional to the number of flavours.
 
+---
+
 Q. 5.
 ### Problem Statement
 
@@ -149,3 +146,5 @@ The highest average strength is 150 (Trainee 1), followed by 146 (Trainee 4), bu
 
 ### Space Complexity:
 - **O(1)**: We only need a constant amount of space to store the input and compute averages.
+
+---
